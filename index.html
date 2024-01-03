@@ -2,42 +2,51 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
-    <script src="javascript/index.js"></script>
-    <title>World ⏲️ - Naomi Randall</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.37/moment-timezone-with-data-1970-2030.min.js"></script>
+    <title>World ⏲</title>
 </head>
 
 <body>
-<div class="container">
-    <h1>World ⏲️</h1>
-    <select>
-        <option value="">Select a city</option>
-        <option value=>London</option>
-        <option value=>Perth</option>
-        <option value=>Manchester</option>
-        <option value=>Tokyo</option>
+    <div class="container">
+        <h1>World Clock</h1>
+
+        <select id="city">
+            <option value="">Select a city..</option>
+            <option value="current">My current location</option>
+            <option value="Europe/London">London</option>
+            <option value="Australia/Perth">Perth</option>
+            <option value="Pacific/Auckland">Auckland</option>
         </select>
 
-        <div class="city">
-            <div>
-            <h2>London</h2>
-            <div class="date">January 2nd 2024</div>
-            </div>
-            <div class="time">14:16 23 <small>PM</small></div>
-        </div>
-            <div class="city">
+        <div id="cities">
+            <div class="city" id="London">
                 <div>
-            <h2>Perth</h2>
-            <div class="date">January 2nd 2024</div>
+                    <h2>London</h2>
+                    <div class="date"></div>
+                </div>
+                <div class="time"></div>
             </div>
-            <div class="time">14:16 23 <small>PM</small></div>
+            <div class="city" id="Perth">
+                <div>
+                    <h2>Perth</h2>
+                    <div class="date"></div>
+                </div>
+                <div class="time"></div>
             </div>
         </div>
+    </div>
     <footer>
-        This Project was coded by Naomi Randall and is <a href="https://github.com/nmrndll/world-clock-exercise" target="_blank"> open sourced on GitHub</a>
+        This project was coded with by <strong>Naomi Randall</strong> and is
+        <a href="https://github.com/nmrndll/world-clock-exercise" target="_blank">
+            open sourced on GitHub</a>
     </footer>
+    <script src="javascript/index.js"></script>
 </body>
 
 </html>
