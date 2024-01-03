@@ -21,6 +21,17 @@ function updateTime() {
     perthTimeElement.innerHTML = perthTime.format(
       "h:mm:ss [<small>]A[</small>]"
     );
+    }
+    let aucklandElement = document.querySelector("#Auckland");
+  if (aucklandElement) {
+    let aucklandDateElement = aucklandElement.querySelector(".date");
+    let aucklandTimeElement = aucklandElement.querySelector(".time");
+    let aucklandTime = moment().tz("Pacific/Auckland");
+
+    aucklandDateElement.innerHTML = aucklandTime.format("MMMM	Do YYYY");
+    aucklandTimeElement.innerHTML = aucklandTime.format(
+      "h:mm:ss [<small>]A[</small>]"
+    );
   }
 }
 
